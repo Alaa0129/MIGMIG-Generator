@@ -1,0 +1,307 @@
+/* Animation */
+@keyframes example {
+    0% {
+        background-color: violet;
+    }
+    25% {
+        background-color: blue;
+    }
+    50% {
+        background-color: lightslategrey;
+    }
+    75% {
+        background-color: darkturquoise;    
+    }
+    100% {
+        background-color: #40ED66;
+    }
+}
+
+/* container for website */
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* header */
+header {
+    background-color: darkslateblue;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header #title {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'SpaceMeatballRegular';
+    font-style: normal;
+    margin: 0;
+}
+
+header .highlight {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+/*horizontal*/
+@media screen and (min-width: 990px) 
+{
+    #wrapper
+    {
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .textOptions
+    {
+        margin-top: 80px;
+        min-width: 600px;
+        width: 600px;
+    }
+    .preview
+    {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/*vertical*/
+@media screen and (max-width: 990px) 
+{
+    #wrapper
+    {
+        width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } 
+    .textOptions
+    {
+        max-width: 990px;
+    }
+
+    .preview
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* Title for top and bottom text editing */
+#name {
+    margin-bottom: 10px;
+}
+
+/* meme container */
+#meme {
+    width: 370px;
+    height: 338px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    text-align: center;
+    position: relative;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    word-break: break-all;
+}
+
+/* Bottom text on preview image */
+#bottomtext {
+    position: absolute;
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: move;
+    left: 25.5%;
+    bottom: 10%;
+}
+
+/* Top text on preview image */
+#toptext {
+    position: absolute;
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: move;
+    left: 33.5%;
+    top: 10%;
+}
+
+/* Middle text on preview image */
+#middletext {
+    grid-row: 2;
+    color: #ffffff;
+}
+
+/* General div for reset and choosePic buttons */
+#buttons {
+    text-align: center;
+    border-bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* file upload for choosePic button */
+#fileupload {
+    width: auto;
+    height: auto;
+}
+
+/* Choose pic button */
+#choosePic {
+    width: 180px;
+    height: 49px;
+    font-weight: bold;
+    font-size: large;
+    color: whitesmoke;    
+    background: #40ED66;
+    border-radius: 180px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 10px;
+}
+
+/* Reset button */
+#reset {
+    width: 115px;
+    height: 49px;
+    font-weight: bold;
+    font-size: large;
+    color: whitesmoke;
+    background: #F46262;
+    border-radius: 180px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* buttons hover change text color */
+#choosePic:hover, #reset:hover, #exportbutton:hover {
+    color: black;
+}
+
+/* Div for the editing tool for the top text */
+#topstyle {
+    float: right;    
+}
+
+/* Div for the editing tool for the bottom text */
+#bottomstyle {
+    float: right;
+}
+
+/* Change font family for top text */
+#selecth2topFontFamily {
+    width: 110px;
+    height: 32px;
+    background: lightgrey;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 180px;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+}
+
+/* Change font family for bottom text */
+#selecth2bottomFontFamily {
+    width: 110px;
+    height: 32px;
+    background: lightgrey;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 180px;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+}
+
+/* Change font size for text */
+#selecth2topfontsize, #selecth2bottomfontsize {
+    width: 50px;
+    height: 32px;
+    background: lightgrey;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 180px;
+    padding: 5px;
+    outline: none;
+}
+
+/* Change color for text */
+.colorpicker {
+    width: 32px;
+    height: 32px;
+    background: lightgrey;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 180px;
+    padding: 5px;
+    outline: none;
+}
+
+/* Text fields */
+.textinput {
+    width: 300px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+/* Highlight textfields */
+.textinput:focus {
+    background-color: darkgrey;
+    color: white;
+}
+
+/* When hover on editing tools */
+#selecth2bottomFontFamily:hover, #selecth2topFontFamily:hover, 
+#selecth2topfontsize:hover, #selecth2bottomfontsize:hover, .colorpicker:hover{
+    border-color: #e8491d;
+}
+
+/* When clicking on editing tools */
+#selecth2bottomFontFamily:active, #selecth2topFontFamily:active, 
+#selecth2topfontsize:active, #selecth2bottomfontsize:active, .colorpicker:active{
+    background-color: #333;
+    border-color: #333;
+    color: #eee;
+}
+
+/* div for export button */
+#export {
+    text-align: center;
+    border-bottom: 30px;
+}
+
+/* export button */
+#exportbutton {
+    width: 100px;
+    height: 49px;
+    font-weight: bold;
+    font-size: large;
+    color: whitesmoke;
+    background: #40ED66;
+    border-radius: 180px;
+    cursor: pointer;
+    outline: none;
+}

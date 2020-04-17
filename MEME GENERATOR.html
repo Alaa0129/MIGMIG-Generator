@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta data is stored here -->
+        <meta name="author" content="Alaa Abdul-Al">
+        <meta name="revised" content="Alaa Abdul-Al, 08-04-2020">
+        <meta name="description" content="Meme generator website">      
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <meta http-equiv="Content-Type" content="text/html; charset = UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+        <!-- Links to scripts & stylesheets -->
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/space-meatball" type="text/css"/>
+        
+        <!-- Title -->
+        <title>
+            migmig generator
+        </title>
+    </head>
+
+    <!-- The website -->
+    <body>      
+        <!-- Header -->
+        <header>
+                <div class="container">
+                    <div id="title">
+                        <span class="highlight">MIGMIG</span> generator
+                    </div>
+                </div>
+        </header>
+
+        <!-- body -->
+        <!-- Everything on the left side of the page -->
+        <div id="wrapper">
+            <div class="preview">
+                <!-- The preview container -->
+                <section>
+                    <div>
+                        <div id="meme" class="container">
+                            <div id="toptext"> TOP TEXT</div>
+
+                            <p id="middletext"> No picture chosen</p>
+
+                            <div id="bottomtext">BOTTOM TEXT</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- The buttons below the preview container -->
+                <section>
+                    <div id="buttons" class="container">
+                        <form>
+                            <button id="reset">
+                                Reset
+                            </button>
+                        </form>
+                        <input type="file" id="fileupload" accept="image/*" hidden='hidden'>
+                        <button id="choosePic" type="button">
+                            Choose picture
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Everything on the right side of the page -->
+            <div class="textOptions">
+                <!-- Edit the top text on the preview scene -->
+                <section>
+                    <div id="toptextedit" class="container">
+                        <h3 id="name">
+                            TOP TEXT
+                        </h3>
+
+                        <div id="topstyle">    
+                            <select id="selecth2topFontFamily" name="selecttopFontFamily" >
+                                <option> Impact </option>
+                                <option> Serif </option>
+                                <option> Arial </option>
+                                <option> Tahoma </option>
+                                <option> Verdana </option>
+                                <option> Lucida Sans Unicode </option>  
+                            </select>
+                            <select id="selecth2topfontsize" name="selecttopfontsize">
+                                <option> 14 </option>
+                                <option> 18 </option>
+                                <option> 22 </option>
+                                <option> 26 </option>
+                                <option> 30 </option>
+                                <option> 34 </option>
+                                <option> 38 </option>
+                                <option> 42 </option>
+                                <option> 46 </option>
+                                <option> 50 </option>
+                                <option> 54 </option>  
+                            </select>
+                            <input id="topcolor" value="#ffffff" class="colorpicker" name="Color Picker" type="color"/>
+                        </div>
+                        <form onsubmit="return false;">
+                            <input id="toptextinput" class="textinput" name="toptext input" type="text" placeholder="Top text...">
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Edit the bottom text on the preview scene -->
+                <section>
+                    <div id="bottomtextedit" class="container">
+                        <h3 id="name">
+                            BOTTOM TEXT
+                        </h3>
+
+                        <div id="bottomstyle">
+                            <select id="selecth2bottomFontFamily" name="selectbottomFontFamily">
+                                <option> Impact </option>
+                                <option> Serif </option>
+                                <option> Arial </option>
+                                <option> Tahoma </option>
+                                <option> Verdana </option>
+                                <option> Lucida Sans Unicode </option>  
+                            </select>
+                            <select id="selecth2bottomfontsize" name="selectbottomfontsize">
+                                <option> 14 </option>
+                                <option> 18 </option>
+                                <option> 22 </option>
+                                <option> 26 </option>
+                                <option> 30 </option>
+                                <option> 34 </option>
+                                <option> 38 </option>
+                                <option> 42 </option>
+                                <option> 46 </option>
+                                <option> 50 </option>
+                                <option> 54 </option>   
+                            </select>
+                            <input id="bottomcolor" value="#ffffff" class="colorpicker" name="Color Picker" type="color" onchange="updateh2color"/>
+                        </div>
+                        <form onsubmit="return false;">
+                            <input id="bottomtextinput" class="textinput" name="bottomtext input" type="text" placeholder="Bottom text...">
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Export bottom -->
+                <section>
+                    <div id="export" class="container">
+                        <button id="exportbutton" type="button" class="exportbutton">
+                            Export
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
+</html>
