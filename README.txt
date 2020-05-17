@@ -1,4 +1,4 @@
-Hjemmesiden kan vise et previre af et billede, som man uploader via 'Choose picture' knappen. 
+Hjemmesiden kan vise et preview af et billede, som man uploader via 'Choose picture' knappen. 
 Desusuden kan man nulstille alle sine ændringer ved at klikke på 'Reset'. 
 
 Hjemmesiden giver mulighed for at ændre tekst, farve, font og fontstørrelse på henholdsvis top- og bundtekst.
